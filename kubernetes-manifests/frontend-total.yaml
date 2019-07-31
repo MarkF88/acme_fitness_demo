@@ -33,7 +33,7 @@ spec:
   template:
     metadata:
       labels:
-        app: frontent
+        app: frontend
         service: frontend
     spec:
       containers:
