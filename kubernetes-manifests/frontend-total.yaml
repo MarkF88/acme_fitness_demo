@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: frontend
   labels:
-    app: acmefit
+    app: frontend
     service: frontend
 spec:
   ports:
@@ -11,8 +11,8 @@ spec:
       protocol: TCP
       port: 3000
   selector:
-    app: acmefit
-    service: frontend
+    app: frontend
+
 
 ---
 apiVersion: apps/v1 # for versions before 1.8.0 use apps/v1beta1
@@ -20,12 +20,12 @@ kind: Deployment
 metadata:
   name: frontend
   labels:
-    app: acmefit
+    app: frontent
     service: frontend
 spec:
   selector:
     matchLabels:
-      app: acmefit
+      app: frontend
       service: frontend
   strategy:
     type: Recreate
@@ -33,7 +33,7 @@ spec:
   template:
     metadata:
       labels:
-        app: acmefit
+        app: frontent
         service: frontend
     spec:
       containers:
