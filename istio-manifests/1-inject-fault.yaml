@@ -4,7 +4,7 @@ metadata:
   name: cart-fe
 spec:
   hosts:
-  - fe
+  - cart
   http:
   - fault:
       abort:
@@ -13,4 +13,4 @@ spec:
         httpStatus: 400
     route:
     - destination:
-        host: fault
+        host: cart
