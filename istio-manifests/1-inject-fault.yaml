@@ -13,5 +13,5 @@ spec:
         httpStatus: 400
     route:
     - destination:
-        host: frontend
+        host: catalog
         version: v1
