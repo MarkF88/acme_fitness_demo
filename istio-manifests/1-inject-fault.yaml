@@ -9,7 +9,7 @@ spec:
   - fault:
       abort:
         httpStatus: 400
-        percent: 100
+        percent: 50
     route:
     - destination:
         host: catalog
