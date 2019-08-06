@@ -9,9 +9,9 @@ spec:
   - fault:
       abort:
         percentage:
-          value: 1
+          value: 1.0
         httpStatus: 400
     route:
     - destination:
         host: catalog
-        version: v1
+        subset: v1
