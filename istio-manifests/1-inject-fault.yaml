@@ -8,9 +8,8 @@ spec:
   http:
   - fault:
       abort:
-        percentage:
-          value: 1.0
         httpStatus: 400
+        percent: 100
     route:
     - destination:
         host: catalog
