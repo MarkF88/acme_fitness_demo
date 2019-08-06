@@ -272,9 +272,9 @@ spec:
       - image: marklfoley/catalog:0.9.0
         name: catalog
         env:
-        - name: CATALOG_DB_HOST
+        - name: CATALOG_DB_ENDPOINT
           value: 'catalog-mongo'
-        - name: CATALOG_DB_PASSWORD
+        - name: CATALOG_DB_SECRET
           valueFrom:
             secretKeyRef:
               name: catalog-mongo-pass
