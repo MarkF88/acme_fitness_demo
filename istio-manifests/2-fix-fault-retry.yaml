@@ -10,7 +10,7 @@ spec:
       - destination:
           host: catalog
           subset: v1
-      timout: 10s
+      timout: 5s
       retries:
         attempts: 3
         perTryTimeout: 2s
