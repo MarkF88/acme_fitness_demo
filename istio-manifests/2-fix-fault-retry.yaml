@@ -6,11 +6,9 @@ spec:
   hosts:
   - catalog
   http:
-    - route:
+    - timout: 5s
+      route:
       - destination:
           host: catalog
           subset: v1
-      timout: 5s
-      retries:
-        attempts: 3
-        perTryTimeout: 2s
+      
