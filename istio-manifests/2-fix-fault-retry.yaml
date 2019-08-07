@@ -11,9 +11,7 @@ spec:
         host: catalog
         subset: v1
     timeout: 3s
-    retries:
-      attempts: 3
-      perTryTimeout: 2s
+
 
 
 
