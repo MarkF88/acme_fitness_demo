@@ -10,8 +10,3 @@ spec:
     - destination:
         host: catalog
         subset: v1
-
-
-
-
-
