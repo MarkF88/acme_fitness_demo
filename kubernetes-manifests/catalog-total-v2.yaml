@@ -1,45 +1,32 @@
-apiVersion: v1
-kind: Service
-metadata:
-  name: catalog
-  labels:
-    app: acmefit
-    service: catalog
-spec:
-  ports:
-    - name: http-catalog
-      protocol: TCP
-      port: 8082
-  selector:
-    app: acmefit
-    service: catalog
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: catalog
   labels:
-    app: acmefit
+    app: catalog-total
     service: catalog
+    version: v2
 spec:
   selector:
     matchLabels:
-      app: acmefit
+      app: catalog-total
       service: catalog
+      version: v2
   strategy:
     type: Recreate
   replicas: 1
   template:
     metadata:
       labels:
-        app: acmefit
+        app: catalog-total
         service: catalog
+        version: v2
     spec:
       volumes:
-      - name: acmefit-catalog-data
+      - name: catalog-data
         emptyDir: {}
       containers:
-      - image: marklfoley/catalog:0.9.0
+      - image: gcr.io/vmwarecloudadvocacy/acmeshop-catalog:1.0.0
         name: catalog
         env:
         - name: CATALOG_DB_HOST
@@ -57,10 +44,10 @@ spec:
           value: '8082'
         ports:
         - containerPort: 8082
-          name: catalog
+          name: http-catalog
         volumeMounts:
         - mountPath: "/data"
-          name: "acmefit-catalog-data"
+          name: "catalog-data"
         resources:
           requests:
             memory: "64Mi"
