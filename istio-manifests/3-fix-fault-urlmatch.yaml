@@ -9,7 +9,7 @@ spec:
   - match:
     - uri:
         exact: "/products"
-      uri:
+    - uri:
         prefix: "/static"
     route:
       - destination:
