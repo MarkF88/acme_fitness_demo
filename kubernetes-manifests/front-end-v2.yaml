@@ -20,6 +20,7 @@ spec:
       labels:
         app: frontend-total
         service: frontend
+        version: v2
     spec:
       containers:
       - image: gcr.io/vmwarecloudadvocacy/acmeshop-front-end:1.0.0
