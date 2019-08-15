@@ -14,6 +14,6 @@ spec:
   - name: v2
     labels:
       version: v2
-  - name: v0.5
+  - name: v0_5
     labels:
-      version: v0.5
+      version: v0_5
