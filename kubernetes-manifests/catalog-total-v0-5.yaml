@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: catalog-v2
+  name: catalog-v0-5
   labels:
     app: catalog-total
     service: catalog
