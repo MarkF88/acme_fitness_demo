@@ -30,12 +30,12 @@ spec:
     route:
     - destination:
         host: frontend
-        version: v2
+        subset: v2
         port:
           number: 3000 
   - route:
     - destination:
         host: frontend
-        version: v1
+        subset: v1
         port:
           number: 3000 
