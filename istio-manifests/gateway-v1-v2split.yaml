@@ -26,7 +26,7 @@ spec:
   - match:
     - headers:
         cookie:
-          regex: "^(.*?;)?(logged-in)(;.*)?$"
+          regex: "logged_in"
     route:
     - destination:
         host: frontend
