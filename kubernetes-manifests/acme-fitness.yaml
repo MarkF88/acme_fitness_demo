@@ -271,6 +271,7 @@ spec:
       containers:
       - image: marklfoley/catalog:0.9.5
         name: catalog
+        imagePullPolicy: Always
         env:
         - name: CATALOG_DB_HOST
           value: 'catalog-mongo'
