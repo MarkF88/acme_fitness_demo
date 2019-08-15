@@ -328,6 +328,7 @@ spec:
     matchLabels:
       app: frontend-total
       service: frontend
+      version: v1
   strategy:
     type: Recreate
   replicas: 1
@@ -336,6 +337,7 @@ spec:
       labels:
         app: frontend-total
         service: frontend
+        version: v1
     spec:
       containers:
       - image: gcr.io/vmwarecloudadvocacy/acmeshop-front-end:1.0.0

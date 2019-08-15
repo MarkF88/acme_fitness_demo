@@ -29,5 +29,6 @@ spec:
     route:
     - destination:
         host: frontend
+        version: v1
         port:
           number: 3000 
