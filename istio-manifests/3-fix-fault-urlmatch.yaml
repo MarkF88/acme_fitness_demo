@@ -9,6 +9,8 @@ spec:
   - match:
     - uri:
         exact: "/products"
+      uri:
+        prefix: "/static"
     route:
       - destination:
           host: catalog
