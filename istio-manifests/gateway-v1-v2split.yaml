@@ -33,9 +33,9 @@ spec:
         version: v2
         port:
           number: 3000 
-    - route:
-      - destination:
-          host: frontend
-          version: v1
-          port:
-            number: 3000 
+  - route:
+    - destination:
+        host: frontend
+        version: v1
+        port:
+          number: 3000 
