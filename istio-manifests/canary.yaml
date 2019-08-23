@@ -10,8 +10,8 @@ spec:
     - destination:
         host: catalog
         subset: v1
-      weight: 50
+      weight: 80
     - destination:
         host: catalog
         subset: v2
-      weight: 50
+      weight: 20
