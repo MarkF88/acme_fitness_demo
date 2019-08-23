@@ -11,10 +11,6 @@ spec:
         host: catalog
         subset: v1
       weight: 50
-    retries:
-      attempts: 2
-      perTryTimeout: 2s
-      retryOn: 5xx
     - destination:
         host: catalog
         subset: v2
