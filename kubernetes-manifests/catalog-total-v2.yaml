@@ -26,7 +26,7 @@ spec:
       - name: catalog-data
         emptyDir: {}
       containers:
-      - image: marklfoley/catalog:0.9.7
+      - image: marklfoley/catalog:0.9.8
         name: catalog
         env:
         - name: CATALOG_DB_HOST
